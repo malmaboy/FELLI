@@ -8,24 +8,25 @@ namespace Felli
         private int countB;
         private int countW;
 
-        private State NextTurn
+        private State NextTurn 
         {
             get
             {
-                if (Finished)
+                if (Finished) // Se tiver terminado 
                 {
-                    return State.Undecided;
+                    return State.Undecided; // 
                 }
-                else if (turn % 2 == 0)
+                else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
                 {
                     return State.B;
                 }
-                else
+                else    // caso contrário joga o W(peças brancas)
                 {
                     return State.W;
                 }
             }
         }
+        
 
         public bool Finished
         {
@@ -52,7 +53,7 @@ namespace Felli
             }
         }
 
-        public Board()
+        public Board() // Inicializa o board com as peças pretas em cimas e as brancas em baixo
         {
             states = new State[5][];
             states[0] = new State[2];
@@ -78,5 +79,17 @@ namespace Felli
                 }
             }
         }
+
+        public State GetState(int x, int y)
+        {
+            return states[x][y];
+        }
+
+        public states()
+        {
+            states = new states; 
+        }
+
+
     }
 }

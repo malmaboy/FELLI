@@ -3,8 +3,8 @@ namespace Felli
     public enum State
     {
         Undecided,
-        B,
-        W,
+        B, // Peças pretas
+        W // Peças Brancas
         
 
         
