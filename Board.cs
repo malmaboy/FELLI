@@ -1,13 +1,13 @@
+using System;
 namespace Felli
 {
     public class Board
     {
 
-        private State[][] states;
+        public static State[][] states;         
         private int turn;
         private int countB;
         private int countW;
-
         private State NextTurn 
         {
             get
@@ -53,14 +53,14 @@ namespace Felli
             }
         }
 
-        public Board() // Inicializa o board com as peças pretas em cimas e as brancas em baixo
+        public Board() // Inicializa o board com as peças pretas em cima e as brancas em baixo
         {
             states = new State[5][];
-            states[0] = new State[2];
-            states[1] = new State[2];
-            states[2] = new State[0];
-            states[3] = new State[2];
-            states[4] = new State[2];
+            states[0] = new State[3];
+            states[1] = new State[3];
+            states[2] = new State[1];
+            states[3] = new State[3];
+            states[4] = new State[3];
             countB = 0;
             countW = 0;
         
@@ -85,11 +85,10 @@ namespace Felli
             return states[x][y];
         }
 
-        public states()
-        {
-            states = new states; 
-        }
 
 
+
+        
+      
     }
 }

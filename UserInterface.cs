@@ -5,87 +5,89 @@ namespace Felli
     // Apenas console Writelines e readlines
     public class UserInterface 
     {
+        
+        
         public void DisplayBoard(Board board)
         {
             string VerticalSymbol = "| "; // simbolo vertical do board
-            string DiagonalSymbol = "---+---+---"; // simbolo diagonal do board
-            string HorizontalSymbol = "------------";
+            string DiagonalSymbol = "_____/__________________________/______"; // simbolo diagonal do board
+            string DiagonalSymbol1 = "_____________/_____________/___________";
+            string HorizontalSymbol = "-----------"; // simbolo horizontal
+            string HorizontalSymbol1 = "-----";
+            
 
-           /* for(int lines = 0; lines < 2; lines++)
+            for(int lines = 0; lines < Board.states.Length; lines++)
             {
-                for(int col = 0; col < states[lines].Length; col++) // erro aqui, devia chamar a variavel states
+                System.Console.WriteLine();
+                if (lines == 1 || lines == 3)
                 {
+                    System.Console.Write("______");
+                }
+                if ( lines == 2)
+                {
+                    System.Console.Write("_________________");
+                }
+                for(int col = 0; col < Board.states[lines].Length; col++) 
+                {
+                    System.Console.Write(VerticalSymbol);
                    switch (board.GetState(lines,col))
                    {
                        case State.B:
-                            Console.Write(" B "); // Peças pretas
+                            Console.Write("B "); // Peças pretas
                             break;
                         case State.W:
-                            Console.Write(" W "); // Peças brancas
+                            Console.Write("W "); // Peças brancas
                             break;
                         case State.Undecided:
                             Console.Write("  "); // Espaço vazio 
                             break;
                    }
-                   Console.WriteLine(VerticalSymbol);
+                    System.Console.Write(VerticalSymbol);
+                    if ( col < Board.states[lines].Length - 1 ) // retira a barra final e imprime a linhas 
+                    {
+                        if( lines == 0 || lines == 4 )
+                        {
+                            System.Console.Write(HorizontalSymbol);
+                        }
+                        if( lines == 1 || lines == 3 )
+                        {
+                            System.Console.Write(HorizontalSymbol1);
+                        }
+                        
+                    }
+                    else
+                    {
+                        if (lines == 1 || lines == 3)
+                        {
+                            System.Console.Write("_____");
+                        }
+                        if ( lines == 2)
+                        {
+                            System.Console.Write("________________");
+                        }
+                    }
+                    
                 }
-                Console.WriteLine(DiagonalSymbol);
-            }   */
+                System.Console.WriteLine();   
+                if ( lines == 0 || lines == 3)
+                {
+                    System.Console.Write(DiagonalSymbol);
+                }
+                if ( lines == 1 || lines == 2)
+                {
+                    System.Console.Write(DiagonalSymbol1);
+                }
+                
 
-            // uma solução para o problema
-            for(int lines = 0; lines < 2; lines++)
-            {
-                for(int col = 0; col < 3; col++)
-                {
-                    switch (board.GetState(lines,col))
-                   {
-                       case State.B:
-                            Console.Write(" B "); // Peças pretas
-                            break;
-                        case State.W:
-                            Console.Write(" W "); // Peças brancas
-                            break;
-                        case State.Undecided:
-                            Console.Write("  "); // Espaço vazio 
-                            break;
-                   }
-                   Console.WriteLine(VerticalSymbol);
-                }
-            }
-                switch (board.GetState(2,0))
-                {
-                    case State.B:
-                        Console.Write(" B "); // Peças pretas
-                        break;
-                    case State.W:
-                        Console.Write(" W "); // Peças brancas
-                        break;
-                    case State.Undecided:
-                        Console.Write("  "); // Espaço vazio 
-                        break;
-                }
-            for(int lines = 0; lines < 2; lines++)
-            {
-                for(int col = 0; col < 3; col++)
-                {
-                    switch (board.GetState(lines,col))
-                   {
-                       case State.B:
-                            Console.Write(" B "); // Peças pretas
-                            break;
-                        case State.W:
-                            Console.Write(" W "); // Peças brancas
-                            break;
-                        case State.Undecided:
-                            Console.Write("  "); // Espaço vazio 
-                            break;
-                   }
-                   Console.WriteLine(VerticalSymbol);
-                }
             }
         }  
     }
 }
+
+            
+
+            
+            
                 
                 
                 
