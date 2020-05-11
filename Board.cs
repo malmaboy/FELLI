@@ -4,22 +4,45 @@ namespace Felli
     public class Board
     {
 
+<<<<<<< HEAD
         private static State[][] states;         
         private int turn;
         private int countB;
         private int countW;
         private State NextTurn(int x) 
+=======
+        public static State[][] states;         
+        private int turn;
+        private int countB;
+        private int countW;
+        private State NextTurn 
+>>>>>>> parte_1
         {
             if(turn == 0){
                 turn = turn + x;
             }
             if (Finished) // Se tiver terminado 
             {
+<<<<<<< HEAD
                 return State.Undecided; // 
             }
             else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
             {
                 return State.B;
+=======
+                if (Finished) // Se tiver terminado 
+                {
+                    return State.Undecided; // 
+                }
+                else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
+                {
+                    return State.B;
+                }
+                else    // caso contrário joga o W(peças brancas)
+                {
+                    return State.W;
+                }
+>>>>>>> parte_1
             }
             else    // caso contrário joga o W(peças brancas)
             {
@@ -87,6 +110,7 @@ namespace Felli
             return states[x][y];
         }
 
+<<<<<<< HEAD
         public static int GetBoardLL()
         {
             return states.Length;
@@ -96,6 +120,8 @@ namespace Felli
             return states[x].Length;
         }
 
+=======
+>>>>>>> parte_1
 
 
 
