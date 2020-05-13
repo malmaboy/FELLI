@@ -28,7 +28,8 @@ Luis Gomes Nº 21901362
 
 
   - As relações entre as classes estão demonstradas no diagrama de UML seguinte.
-
+  
+  [](https://github.com/malmaboy/FELLI/blob/master/Fluxograma.png)
   
 
 
