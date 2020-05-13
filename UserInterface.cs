@@ -40,7 +40,7 @@ namespace Felli
                         case State.W:
                             Console.Write("W "); // Peças brancas
                             break;
-                        case State.Undecided:
+                        case State.Empty:
                             Console.Write("  "); // Espaço vazio 
                             break;
                    }

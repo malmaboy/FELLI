@@ -10,6 +10,8 @@ namespace Felli
         {
             board = new Board();
             UI = new UserInterface();
+
+            board.FirstTurn();
         }
         public void Play()
         {
@@ -18,11 +20,9 @@ namespace Felli
                 // Mostra o board
                 UI.DisplayBoard(board);
 
-                // Pede Input ao jogador
-                Console.ReadLine();
-
                 // Fazemos a jogada
 
+                board.Move();
 
             }while(!board.Finished);
                 

@@ -2,7 +2,7 @@ namespace Felli
 {
     public enum State
     {
-        Undecided,
+        Empty,
         B, // Peças pretas
         W // Peças Brancas
         
