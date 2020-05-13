@@ -9,25 +9,6 @@ namespace Felli
         private int countB;
         private int countW;
         private char turn;
-        /*private State NextTurn(int x) 
-        {
-            if(turn == 0){
-                turn = turn + x;
-            }
-            if (Finished) // Se tiver terminado 
-            {
-                return State.Empty; // 
-            }
-            else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
-            {
-                return State.B;
-            }
-            else    // caso contrário joga o W(peças brancas)
-            {
-                return State.W;
-            }
-            
-        }*/
 
         public void FirstTurn()
         {

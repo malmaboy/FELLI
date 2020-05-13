@@ -17,7 +17,7 @@ namespace Felli
             string HorizontalSymbol = "-----------"; // simbolo horizontal
             string HorizontalSymbol1 = "-----";
             string Positions 
-            = "\n (01);(02);(03)\n (10);(11);(12)\n (20)\n (30);(31);(32)\n (40);(41);(42)\n";
+            = "\n posições(x,y): \n (01);(02);(03)\n (10);(11);(12)\n (20)\n (30);(31);(32)\n (40);(41);(42)\n";
             
             System.Console.WriteLine(Positions);
             for(int lines = 0; lines < Board.GetBoardLL(); lines++)
