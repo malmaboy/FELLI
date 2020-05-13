@@ -108,11 +108,15 @@ namespace Felli
         public void Move()
         {
             Console.WriteLine("Insira a posição da peça a movimentar.");
+            System.Console.WriteLine("Insira a linha da peça: ");
             int l1 = Int32.Parse(Console.ReadLine());
+            System.Console.WriteLine("Insira a coluna de peça: ");
             int c1 = Int32.Parse(Console.ReadLine());
 
             Console.WriteLine("Insira a nova posição da peça.");
+            System.Console.WriteLine("Insira a linha da peça: ");
             int l2 = Int32.Parse(Console.ReadLine());
+            System.Console.WriteLine("Insira a linha da coluna: ");
             int c2 = Int32.Parse(Console.ReadLine());
 
             if ( turn == 'b')
