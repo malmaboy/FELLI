@@ -146,8 +146,7 @@ namespace Felli
         /// </summary>
         public void Move()
         {
-            Ui = new UserInterface();
-            board = new Board();
+            
 
             Ui.FirstPos();
             Ui.Lines();
