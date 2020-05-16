@@ -16,8 +16,10 @@ namespace Felli
             string DiagonalSymbol1Down = "______________/__________\\_____________";
             string HorizontalSymbol = "-----------"; // simbolo horizontal
             string HorizontalSymbol1 = "-----";
-            
+            string Positions 
+            = "\n posições(x,y): \n (01);(02);(03)\n (10);(11);(12)\n (20)\n (30);(31);(32)\n (40);(41);(42)\n";
 
+            System.Console.WriteLine(Positions);
             for(int lines = 0; lines < Board.GetBoardLL(); lines++)
             {
                 System.Console.WriteLine();
@@ -91,7 +93,34 @@ namespace Felli
                 
 
             }
-        }  
+        }
+
+        public void InvMessage(Board board)
+        {
+            System.Console.WriteLine("Movimento invalido.");
+            
+        }
+        public void FirstPos(Board board)
+        {
+            System.Console.WriteLine("Insira a posição da peça a movimentar.");
+        }
+        public void MovePos(Board board)
+        {
+            System.Console.WriteLine("Insira a nova posição da peça.");
+        }
+        public void PlayerChoice(Board board)
+        {
+            System.Console.WriteLine("Insira o jogador que joga primeiro (B ou W)");
+        }
+        public void Lines(Board board)
+        {
+            System.Console.WriteLine("Insira a linha da peça: ");
+        }
+        public void Col(Board board)
+        {
+            System.Console.WriteLine("Insira a coluna de peça: ");
+        }
+
     }
 }
 

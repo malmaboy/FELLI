@@ -11,30 +11,17 @@ namespace Felli
         private char turn;
         private int line;
         private int col;
+        private UserInterface Ui;
+        private Board board;
 
-        /*private State NextTurn(int x) 
-        {
-            if(turn == 0){
-                turn = turn + x;
-            }
-            if (Finished) // Se tiver terminado 
-            {
-                return State.Empty; // 
-            }
-            else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
-            {
-                return State.B;
-            }
-            else    // caso contrário joga o W(peças brancas)
-            {
-                return State.W;
-            }
-            
-        }*/
+
 
         public void FirstTurn()
         {
-            Console.WriteLine("Insira o jogador que joga primeiro (B ou W)");
+            Ui = new UserInterface();
+            board = new Board();
+
+            Ui.PlayerChoice(board);
 
             turn = Console.ReadKey().KeyChar;
 
@@ -133,12 +120,19 @@ namespace Felli
 
         public void Move()
         {
-            Console.WriteLine("Insira a posição da peça a movimentar.");
+            Ui = new UserInterface();
+            board = new Board();
+
+            Ui.FirstPos(board);
+            Ui.Lines(board);
             int l1 = Int32.Parse(Console.ReadLine());
+            Ui.Col(board);
             int c1 = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine("Insira a nova posição da peça.");
+            Ui.MovePos(board);
+            Ui.Lines(board);
             int l2 = Int32.Parse(Console.ReadLine());
+            Ui.Col(board);
             int c2 = Int32.Parse(Console.ReadLine());
 
             if ( turn == 'b')
@@ -265,7 +259,7 @@ namespace Felli
 
                 else
                 {
-                    Console.WriteLine("Movimento Inválido");   
+                    Ui.InvMessage(board);   
                 }
 
             }
@@ -394,7 +388,7 @@ namespace Felli
 
                 else
                 {
-                    Console.WriteLine("Movimento Inválido");   
+                    Ui.InvMessage(board);    
                 }
             }
             
