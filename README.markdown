@@ -24,7 +24,7 @@
 
 #### Arquitetura da solução
 
-  - O código está dividido por classes. A classe "program" possui o metodo "main" que dá inicio ao programa. Dentro da classe "Game" tem os metodos "Game" e "Play". Este metodos fazem o _render_ do tabuleiro, _User Interface_, movimentação das peças e o verifica se há vitoria de um dos jogadores. O metodo "Game" é uma instância da classe "Board". Esta classe faz uma matriz do posicionamento das peças no movimento das peças. A classe "User Interface" faz _render_ do tabuleiro. A enumeração "State" diz quais são as peças do jogo.
+  - Para a solução do projeto começamos por definir o game loop , isto é, o jogo só irá acabar quando houver um vencedor. De seguida, foi feito uma enumeração das peças brancas, peças pretas e os espaços vazios. Depois, estruturamos o tabuleiro que será imprimido na consola, com as peças anteriormente definidas. Também foi aplicada a escolha de qual jogador jogaria primeiro e foi feito o movimento das peças.
 
 
   - As relações entre as classes estão demonstradas no diagrama de UML seguinte.
@@ -37,7 +37,7 @@
 
 #### Referências 
 
-  - Aprenda A Programar em C# (livro)
+  - Aprenda A Programar em C# (livro), de António Trigo e Jorge Henriques, dição: Edições Sílabo, janeiro de 2018
   - [W3schools](https://www.w3schools.com/cs/cs_properties.asp)
   - Troca de ideias com o João Fonseca Nº 21905441, em como usar variaveis privadas em vez de publicas.
   - TicTacToe feito durante a aula de Linguagens de programação 1. 
