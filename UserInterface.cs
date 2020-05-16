@@ -104,7 +104,7 @@ namespace Felli
         /// Escreve movimento inválido na consola.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void InvMessage(Board board)
+        public void InvMessage()
         {
             System.Console.WriteLine("Movimento invalido.");
             
@@ -113,7 +113,7 @@ namespace Felli
         /// Escreve para o jogador inserir uma peça para movimentar na consola.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void FirstPos(Board board)
+        public void FirstPos()
         {
             System.Console.WriteLine("Insira a posição da peça a movimentar.");
         }
@@ -121,7 +121,7 @@ namespace Felli
         /// Escreve para o jogador inserir a nova posição da peça que escolheu na consola.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void MovePos(Board board)
+        public void MovePos()
         {
             System.Console.WriteLine("Insira a nova posição da peça.");
         }
@@ -129,15 +129,15 @@ namespace Felli
         /// Escreve para o jogador decidir quem joga primeiro as peças pretas ou brancas na consola.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void PlayerChoice(Board board)
+        public void PlayerChoice()
         {
-            System.Console.WriteLine("Insira o jogador que joga primeiro (B ou W)");
+            System.Console.WriteLine("Insira o jogador que joga primeiro (b ou w)");
         }
         /// <summary>
         /// Escreve para o jogador inserir a linha da peça.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void Lines(Board board)
+        public void Lines()
         {
             System.Console.WriteLine("Insira a linha da peça: ");
         }
@@ -145,7 +145,7 @@ namespace Felli
         /// Escreve para o jogador inserir a coluna da peça.
         /// </summary>
         /// <param name="board">Recebe os parametros da classe Board.</param>
-        public void Col(Board board)
+        public void Col()
         {
             System.Console.WriteLine("Insira a coluna de peça: ");
         }

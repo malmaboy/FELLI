@@ -26,7 +26,7 @@ namespace Felli
             Ui = new UserInterface();
             board = new Board();
 
-            Ui.PlayerChoice(board);
+            Ui.PlayerChoice();
 
             turn = Console.ReadKey().KeyChar;
 
@@ -149,16 +149,16 @@ namespace Felli
             Ui = new UserInterface();
             board = new Board();
 
-            Ui.FirstPos(board);
-            Ui.Lines(board);
+            Ui.FirstPos();
+            Ui.Lines();
             int l1 = Int32.Parse(Console.ReadLine());
-            Ui.Col(board);
+            Ui.Col();
             int c1 = Int32.Parse(Console.ReadLine());
 
-            Ui.MovePos(board);
-            Ui.Lines(board);
+            Ui.MovePos();
+            Ui.Lines();
             int l2 = Int32.Parse(Console.ReadLine());
-            Ui.Col(board);
+            Ui.Col();
             int c2 = Int32.Parse(Console.ReadLine());
 
             if ( turn == 'b')
@@ -285,7 +285,7 @@ namespace Felli
 
                 else
                 {
-                    Ui.InvMessage(board);   
+                    Ui.InvMessage();   
                 }
 
             }
@@ -414,7 +414,7 @@ namespace Felli
 
                 else
                 {
-                    Ui.InvMessage(board);    
+                    Ui.InvMessage();    
                 }
             }
             
