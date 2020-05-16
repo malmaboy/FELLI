@@ -255,7 +255,7 @@ namespace Felli
 
                             else
                             {
-                                if (c1 + 2 == c2 || c1 -2 == c2)
+                                if (c1 + 2 == c2 || c1 -2 == c2 && l2 != 0)
                                 {
                                     states[3][1] = State.Empty;
                                 }
@@ -384,7 +384,7 @@ namespace Felli
 
                             else
                             {
-                                if (c1 + 2 == c2 || c1 -2 == c2)
+                                if (c1 + 2 == c2 || c1 -2 == c2 && l2 != 2)
                                 {
                                     states[3][1] = State.Empty;
                                 }
