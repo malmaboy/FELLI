@@ -40,9 +40,7 @@ namespace Felli
 
             // Mostra o tabuleiro final
 
-            UI.DisplayBoard(board); 
-
-            // Indica o resultado final 
+            UI.DisplayBoard(board);  
         }
     }
 }
