@@ -9,6 +9,25 @@ namespace Felli
         private int countB;
         private int countW;
         private char turn;
+        /*private State NextTurn(int x) 
+        {
+            if(turn == 0){
+                turn = turn + x;
+            }
+            if (Finished) // Se tiver terminado 
+            {
+                return State.Empty; // 
+            }
+            else if (turn % 2 == 0) // Se o turno for par joga o B (peças pretas)
+            {
+                return State.B;
+            }
+            else    // caso contrário joga o W(peças brancas)
+            {
+                return State.W;
+            }
+            
+        }*/
 
         public void FirstTurn()
         {
@@ -89,15 +108,11 @@ namespace Felli
         public void Move()
         {
             Console.WriteLine("Insira a posição da peça a movimentar.");
-            System.Console.WriteLine("Insira a linha da peça: ");
             int l1 = Int32.Parse(Console.ReadLine());
-            System.Console.WriteLine("Insira a coluna de peça: ");
             int c1 = Int32.Parse(Console.ReadLine());
 
             Console.WriteLine("Insira a nova posição da peça.");
-            System.Console.WriteLine("Insira a linha da peça: ");
             int l2 = Int32.Parse(Console.ReadLine());
-            System.Console.WriteLine("Insira a linha da coluna: ");
             int c2 = Int32.Parse(Console.ReadLine());
 
             if ( turn == 'b')
@@ -137,9 +152,12 @@ namespace Felli
 
                             else
                             {
-                                if (c1 + 2 == c2 || c1 -2 == c2)
+                                if (c2 != 0)
                                 {
-                                    states[1][1] = State.Empty;
+                                    if (c1 + 2 == c2 || c1 -2 == c2)
+                                    {
+                                        states[1][1] = State.Empty;
+                                    }
                                 }
                             }
                         }
@@ -263,9 +281,12 @@ namespace Felli
 
                             else
                             {
-                                if (c1 + 2 == c2 || c1 -2 == c2)
+                                if (c2 != 0)
                                 {
-                                    states[1][1] = State.Empty;
+                                    if (c1 + 2 == c2 || c1 -2 == c2)
+                                    {
+                                        states[1][1] = State.Empty;
+                                    }
                                 }
                             }
                         }

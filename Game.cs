@@ -25,7 +25,13 @@ namespace Felli
                 board.Move();
 
             }while(!board.Finished);
-                 
+                
+
+            // Mostra o tabuleiro final
+
+            UI.DisplayBoard(board); 
+
+            // Indica o resultado final 
         }
     }
 }
