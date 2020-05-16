@@ -80,9 +80,6 @@ namespace Felli
                 }
             }
 
-            Console.WriteLine(countB);
-            Console.WriteLine(countW);
-
             if (countB == 0 || countW == 0) 
             {
                 return true;
