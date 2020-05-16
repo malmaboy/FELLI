@@ -44,6 +44,7 @@ namespace Felli
 
             countW = 0;
 
+            // Percorre todas as posições do tabuleiro e verifica as peças
             for (line = 0; line < 5 ; line++)
             {
                 for (col = 0; col < 3 ; col++)
@@ -77,6 +78,8 @@ namespace Felli
                 }
             }
 
+            // Se verificar que não há peças de qualquer um dos jogadores o jogo
+            // acaba
             if (countB == 0 || countW == 0) 
             {
                 return true;
@@ -147,29 +150,36 @@ namespace Felli
         public void Move()
         {
             
-
+            // Obtém a posição da peça que o jogador quer mover
             Ui.FirstPos();
             Ui.Lines();
             int l1 = Int32.Parse(Console.ReadLine());
             Ui.Col();
             int c1 = Int32.Parse(Console.ReadLine());
 
+            // Obtém a posição para onde o jogador quer mover a peça
             Ui.MovePos();
             Ui.Lines();
             int l2 = Int32.Parse(Console.ReadLine());
             Ui.Col();
             int c2 = Int32.Parse(Console.ReadLine());
 
+            // Verifica qual jogador deve jogar
             if ( turn == 'b')
-            {
+            {   
+
+                // Verifica se o jogador moveu uma peça válida para uma posição válida
                 if ( states[l1][c1] == State.B && states[l2][c2] == State.Empty)
                 {
+                    // A posição da peça é trocada 
                     states[l1][c1] = State.Empty;
                     states[l2][c2] = State.B;
                     turn = 'w';
 
+                    // Verifica se o jogador comeu uma peça
                     if (l1 + 2 == l2||c1 + 2 == c2||l1 - 2 == l2||c1 - 2 == c2)
                     {
+                        // Retira a peça comida do tabuleiro
                         if ( l1 == 0 )
                         {
                             if ( l1 + 2 == l2)
@@ -282,6 +292,8 @@ namespace Felli
                     }
                 }
 
+                /* Se o jogador tentar mover uma peça inválida ou mover uma peça
+                para uma posição já preenchida apresenta uma mensagem*/
                 else
                 {
                     Ui.InvMessage();   
@@ -289,6 +301,7 @@ namespace Felli
 
             }
 
+            // Repete o mesmo processo para as outras peças
             else
             {
                 if ( states[l1][c1] == State.W && states[l2][c2] == State.Empty)
@@ -410,7 +423,9 @@ namespace Felli
                         }
                     }
                 }
-
+                
+                /* Se o jogador tentar mover uma peça inválida ou mover uma peça
+                para uma posição já preenchida apresenta uma mensagem*/
                 else
                 {
                     Ui.InvMessage();    
@@ -418,11 +433,6 @@ namespace Felli
             }
             
         }
-
-
-
-
-        
       
     }
 }
