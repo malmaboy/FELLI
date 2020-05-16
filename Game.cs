@@ -24,7 +24,7 @@ namespace Felli
 
                 board.Move();
 
-            }while(!board.Finished);
+            }while(board.Finished() == false);
                 
 
             // Mostra o tabuleiro final

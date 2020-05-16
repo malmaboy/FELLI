@@ -9,6 +9,9 @@ namespace Felli
         private int countB;
         private int countW;
         private char turn;
+        private int line;
+        private int col;
+
         /*private State NextTurn(int x) 
         {
             if(turn == 0){
@@ -38,29 +41,55 @@ namespace Felli
         }
         
 
-        public bool Finished
+        public bool Finished()
         {
-            get
+            countB = 0;
+
+            countW = 0;
+
+            for (line = 0; line < 5 ; line++)
             {
-            for (int i = 0; i < states.Length; i++)
-            {
-                for (int j = 0; j < states[i].Length; j++)
+                for (col = 0; col < 3 ; col++)
                 {
-                    if (states[i][j] == State.B){
-                        countB++;
+                    if (line == 2)
+                    {
+                        if (states[2][0] == State.B)
+                        {
+                            countB++;
+                        }
+
+                        if (states[2][0] == State.W)
+                        {
+                            countW++;
+                        }
                     }
-                    if (states[i][j] == State.W){
-                        countW++;
-                    }
+
+                    else
+                    {
+                        if (states[line][col] == State.B)
+                        {
+                            countB++;
+                        }
+
+                        if (states[line][col] == State.W)
+                        {
+                            countW++;
+                        }
+                    }   
+
                 }
             }
 
-            if(countB>0 && countW>0){
-                return false;
+            Console.WriteLine(countB);
+            Console.WriteLine(countW);
+
+            if (countB == 0 || countW == 0) 
+            {
+                return true;
             }
 
-            return true;
-            }
+            return false;
+            
         }
 
         public Board() // Inicializa o board com as peças pretas em cima e as brancas em baixo
