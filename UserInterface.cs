@@ -15,17 +15,17 @@ namespace Felli
         public void DisplayBoard(Board board)
         {
             string VerticalSymbol = "| "; // simbolo vertical do board
-            string DiagonalSymbolUp = "_____\\__________________________/______"; // simbolo diagonal do board
-            string DiagonalSymbol1Up = "______________\\__________/_____________";
-            string DiagonalSymbolDown = "_____/__________________________\\______"; // simbolo diagonal do board
+            string DiagonalSymbolUp = "_____\\__________________________/______"; // simbolo diagonal do tabuleiro
+            string DiagonalSymbol1Up = "______________\\__________/_____________"; // simbolo diagonal do tabuleiro
+            string DiagonalSymbolDown = "_____/__________________________\\______"; // linha diagonal do tabuleiro
             string DiagonalSymbol1Down = "______________/__________\\_____________";
-            string HorizontalSymbol = "-----------"; // simbolo horizontal
-            string HorizontalSymbol1 = "-----";
-            string Positions 
+            string HorizontalSymbol = "-----------"; // linha horizontal
+            string HorizontalSymbol1 = "-----"; // linha vertical 
+            string Positions // Coordenadas das posições para ajudar os jogadores 
             = "\n posições(x,y): \n (00);(01);(02)\n (10);(11);(12)\n (20)\n (30);(31);(32)\n (40);(41);(42)\n";
 
             System.Console.WriteLine(Positions);
-            for(int lines = 0; lines < Board.GetBoardLL(); lines++)
+            for(int lines = 0; lines < Board.GetBoardLL(); lines++) // Põe as peças no board
             {
                 System.Console.WriteLine();
                 if (lines == 1 || lines == 3)
