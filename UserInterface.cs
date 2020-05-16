@@ -2,11 +2,16 @@ using System;
 
 namespace Felli
 {
-    // Apenas console Writelines e readlines
+    /// <summary>
+    /// Classe responsável por mostrar todo o UI na consola para o jogador ver.
+    /// </summary>
     public class UserInterface 
     {
         
-        
+        /// <summary>
+        /// Mostra o tabuleiro na consola.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void DisplayBoard(Board board)
         {
             string VerticalSymbol = "| "; // simbolo vertical do board
@@ -95,27 +100,51 @@ namespace Felli
             }
         }
 
+        /// <summary>
+        /// Escreve movimento inválido na consola.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void InvMessage(Board board)
         {
             System.Console.WriteLine("Movimento invalido.");
             
         }
+        /// <summary>
+        /// Escreve para o jogador inserir uma peça para movimentar na consola.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void FirstPos(Board board)
         {
             System.Console.WriteLine("Insira a posição da peça a movimentar.");
         }
+        /// <summary>
+        /// Escreve para o jogador inserir a nova posição da peça que escolheu na consola.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void MovePos(Board board)
         {
             System.Console.WriteLine("Insira a nova posição da peça.");
         }
+        /// <summary>
+        /// Escreve para o jogador decidir quem joga primeiro as peças pretas ou brancas na consola.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void PlayerChoice(Board board)
         {
             System.Console.WriteLine("Insira o jogador que joga primeiro (B ou W)");
         }
+        /// <summary>
+        /// Escreve para o jogador inserir a linha da peça.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void Lines(Board board)
         {
             System.Console.WriteLine("Insira a linha da peça: ");
         }
+        /// <summary>
+        /// Escreve para o jogador inserir a coluna da peça.
+        /// </summary>
+        /// <param name="board">Recebe os parametros da classe Board.</param>
         public void Col(Board board)
         {
             System.Console.WriteLine("Insira a coluna de peça: ");

@@ -1,11 +1,18 @@
 using System;
 namespace Felli
 {
+    ///
+    /// Classe responsável por instanciar o tabuleiro e o UI e gerir
+    /// o andamento do jogo.
+    ///
     public class Game
     {
         private Board board;
         private UserInterface UI;
 
+        ///
+        /// Instancia o tabuleiro e o UI
+        /// 
         public Game()
         {
             board = new Board();
@@ -13,11 +20,15 @@ namespace Felli
 
             board.FirstTurn();
         }
+        ///
+        /// Inicializa o jogo
+        ///
+        
         public void Play()
         {
             do
             {
-                // Mostra o board
+                // Mostra o tabuleiro
                 UI.DisplayBoard(board);
 
                 // Fazemos a jogada

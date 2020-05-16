@@ -1,11 +1,13 @@
 using System;
 namespace Felli
 {
+    /// <summary>
+    /// Classe que modifica o tabuleiro, gera jogadas e verifica a vitória.
+    /// </summary>
     public class Board
     {
 
         private static State[][] states;         
-        //private int turn;
         private int countB;
         private int countW;
         private char turn;
@@ -15,7 +17,10 @@ namespace Felli
         private Board board;
 
 
-
+        /// <summary>
+        /// Escolhe qual o jogador que joga primeiro as peças brancas
+        /// ou pretas.
+        /// </summary>
         public void FirstTurn()
         {
             Ui = new UserInterface();
@@ -27,7 +32,12 @@ namespace Felli
 
         }
         
-
+        /// <summary>
+        /// Verifica se os requirimentos para o jogo acabar 
+        /// foram alcançados.
+        /// </summary>
+        /// <returns>Retorna true se o jogo acabar, caso contrário 
+        /// retorna false.</returns>
         public bool Finished()
         {
             countB = 0;
@@ -75,8 +85,10 @@ namespace Felli
             return false;
             
         }
-
-        public Board() // Inicializa o board com as peças pretas em cima e as brancas em baixo
+        /// <summary>
+        /// Cria o estado do board inicial.
+        /// </summary>
+        public Board()
         {
             states = new State[5][];
             states[0] = new State[3];
@@ -86,7 +98,6 @@ namespace Felli
             states[4] = new State[3];
             countB = 0;
             countW = 0;
-            //turn = 0;
         
             for (int i = 0; i< 2;i++){
 
@@ -103,21 +114,36 @@ namespace Felli
                 }
             }
         }
-
+        /// <summary>
+        /// Verifica qual o estado de um ponto específico do board.
+        /// </summary>
+        /// <param name="x">Número da linha a ver.</param>
+        /// <param name="y">Número da coluna a ver.</param>
+        /// <returns></returns>
         public State GetState(int x, int y)
         {
             return states[x][y];
         }
-
+        /// <summary>
+        /// Verifica quantas linhas tem o array.
+        /// </summary>
+        /// <returns>O número de linhas (tamanho do array).</returns>
         public static int GetBoardLL()
         {
             return states.Length;
         }
+        /// <summary>
+        /// Verifica quantas colunas tem cada linha do array.
+        /// </summary>
+        /// <param name="x">Linha a ser verificada</param>
+        /// <returns>O número de colunas numa certa linha do array</returns>
         public static int GetBoardLC(int x)
         {
             return states[x].Length;
         }
-
+        /// <summary>
+        /// Movimenta as peças no board.
+        /// </summary>
         public void Move()
         {
             Ui = new UserInterface();
