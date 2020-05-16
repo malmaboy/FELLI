@@ -1,25 +1,25 @@
 #### Autores 
 
 
-Hugo Carvalho Nº 21901624
-Francisco Costa Nº 21903228
-Luis Gomes Nº 21901362
+-   Hugo Carvalho Nº 21901624
+-   Francisco Costa Nº 21903228
+-   Luis Gomes Nº 21901362
 
 - Hugo Carvalho 
     
-    - Tabulerio
-    - User Interface
+    - Tabuleiro
+    - _User Interface_
 
 - Francisco Costa
     
     - Divisão das classes e Inicialização do tabuleiro
-    - Correções do tabuleiro 
-    - Classe NextTurn
+    - Turnos dos jogadores 
 
 - Luis Gomes 
   
   - Movimento
   - Eliminações das peças
+  - Verificação de vitória
 
 
 #### Arquitetura da solução
@@ -29,7 +29,7 @@ Luis Gomes Nº 21901362
 
   - As relações entre as classes estão demonstradas no diagrama de UML seguinte.
   
-  [](https://github.com/malmaboy/FELLI/blob/master/Fluxograma.png)
+ ![](https://github.com/malmaboy/Images/blob/master/Fluxograma.png)
   
 
 
